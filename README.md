@@ -2,7 +2,6 @@
 
 A multi-page website for **HeadHealth**, a fictional South African mental health and counselling service. Visitors can learn about the organisation and its partner, browse the counselling sessions on offer, find crisis helplines, and send the team a message.
 
-![Counselling page](docs/counselling.png)
 
 **Author:** Tifuh Nche
 **Course:** [COURSE CODE AND NAME]
@@ -27,6 +26,24 @@ The domain is based on the work of South African mental health organisations suc
 | **Counselling** | `/Home/Counselling` | Cards for every bookable session showing its name, duration, price, platform or location, description, and refund policy, each with a **Book Now** button |
 | **Contact Us** | `/Home/Contact` | Operating hours, address, an embedded map, contact details, and a contact form |
 | **Home** (documentation) | `/Home/Home` | The assignment write-up: use case narratives and the class diagram |
+
+## Page Screenshots
+
+### Index
+
+![Index page](Index.png)
+
+### About Us
+
+![About Us page](About.png)
+
+### Counselling
+
+![Counselling page](Counselling.png)
+
+### Contact Us
+
+![Contact Us page](Contact.png)
 
 ## Object-Oriented Design
 
