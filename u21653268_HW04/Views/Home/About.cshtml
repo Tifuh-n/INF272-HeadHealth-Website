@@ -1,53 +1,56 @@
-﻿@{
+@{
     ViewBag.Title = "About Us";
 }
-<div class="container">
-    <h1>@ViewBag.Title</h1>
-    <h3>@ViewBag.Message</h3>
-    <br />
 
+<div class="page-wrap">
 
-    <div class="row bg-white">
-        <div class="col-sm-8">
-            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid rounded" alt="" />
+    <header class="mb-4">
+        <h1 class="page-title">@ViewBag.Title</h1>
+        @if (ViewBag.Message != null)
+        {
+            <p class="page-sub">@ViewBag.Message</p>
+        }
+    </header>
 
+    <section class="glass glass-lg">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" class="about-photo" alt="Mental health support" />
+            </div>
+            <div class="col-lg-5">
+                <p class="mb-0">
+                    HeadHealth is all about the individual's mental health and wellbeing.
+                    An average of 1400 people call the South African Depression and Anxiety (SADAG) Suicide Helpline every day and those are the ones who know it exists or are able to reach out for themselves or a loved one.
+                    HeadHealth strives to help reach the SDG (Sustainable Development Goal) #3 which is good health and well-being. What people often forget when it comes to healthcare is that your mental health is just as important as your physical health.
+                    Keeping that in mind we hope to support many foundations that help our country ensure healthy lives and promote well-being for all.
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="col-sm-4 text-center">
-            <p>
-                HeadHealth is all about the individual's mental health and wellbeing.
-                An average of 1400 people call the South African Depression and Anxiety (SADAG) Suicide Helpline every day and those are the ones who know it exists or are able to reach out for themselves or a loved one.
-                HeadHealth strives to help reach the SDG (Sustainable Development Goal) #3 which is good health and well-being. What people often forget when it comes to healthcare is that your mental health is just as important as your physical health.
-                Keeping that in mind we hope to support many foundations that help our country ensure healthy lives and promote well-being fo all.
-            </p>
+    <section class="glass glass-lg">
+        <h2 class="section-title">About Inala Mental Health Foundation</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                <p class="mb-0">
+                    Inala is a registered non-profit company focusing on mental health and wellbeing. We believe that by shifting the mental state of an individual, we can impact directly on their ability to make positive choices, actions and relationships.
+                    Based in Mowbray, Cape Town, we offer mental health intervention methods to individuals, groups and families.
+                    At Inala, we have a family-centred approach, working with the individual and their closest support system to have a more impacting and sustainable change effect.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <div class="logo-tile">
+                    <img src="~/Images/INALA.png" alt="Inala Mental Health Foundation logo" />
+                </div>
+            </div>
         </div>
-    </div>
-    <hr />
-    <br />
-    <h2>About Inala Mental Health Foundation</h2>
-    <div class="row bg-white">
-        <div class="col-sm-4">
+    </section>
 
-            <p>
-                Inala is a registered non-profit company focusing on mental health and wellbeing. We believe that by shifting the mental state of an individual, we can impact directly on their ability to make positive choices, actions and relationships.
-                Based in Mowbray, Cape Town, we offer mental health intervention methods to individuals, groups and families.
-                At Inala, we have a family-centred approach, working with the individual and their closest support system to have a more impacting and sustainable change effect.
+    <section class="glass glass-lg">
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+            <h2 class="section-title mb-3 mb-md-0">Support Inala Mental Health Foundation</h2>
+            <a class="btn btn-danger" href="https://www.inala.org.za/donate/" target="_blank" rel="noopener">DONATE NOW</a>
+        </div>
+    </section>
 
-            </p>
-        </div>
-        <div class="col-sm-8 text-right">
-            <img src="https://www.inala.org.za/wp-content/uploads/2020/05/logo1.png" class="img-fluid h-100" alt="" />
-
-        </div>
-    </div>
-    <br />
-    <hr />
-    <div class="container">
-        <div class="row">
-            <button type="button" class="btn btn-danger rounded-pill">
-                <a class="btn btn-default text-white" href="https://www.inala.org.za/donate/">DONATE NOW</a>
-            </button>
-            <h2>&nbsp;&nbsp; Support Inala Mental Health Foundation</h2>
-        </div>
-    </div>
 </div>

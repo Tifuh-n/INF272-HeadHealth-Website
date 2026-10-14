@@ -1,43 +1,41 @@
-﻿@model List<u21653268_HW04.Models.Session>
+@model List<u21653268_HW04.Models.Session>
 @{
     ViewBag.Title = "Counselling";
 }
-<div class="container">
-    <h1>Counselling</h1>
-    <h3>Sessions available for booking</h3>
-    <h5 class="text-muted">If you need someone to talk to</h5>
 
-    <br />
+<div class="page-wrap">
 
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3">
-            @foreach (var session in Model)
-            {
-                <div class="col mb-3">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="@session.ImageURL" alt="Image" />
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">@session.Name</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">@session.GetInfo()</h6>
-                            <p class="card-text">@session.Description</p>
+    <section class="glass glass-lg">
+        <h1 class="page-title">Counselling</h1>
+        <h4 class="mb-1">Sessions available for booking</h4>
+        <p class="page-sub">If you need someone to talk to</p>
+    </section>
 
-                            @if (session.Refund)
-                            {
-                                <h6 class="card-subtitle mb-2 text-muted">Refunds can be given if you are unable to make it</h6>
-                            }
-                            else
-                            {
-                                <h6 class="card-subtitle mb-2 text-muted">No refunds are given if you are unable to make it</h6>
-                            }
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-primary rounded-pill">
-                                <a class="btn btn-default text-white" href="/Home/Contact">Book Now</a>
-                            </button>
-                        </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        @foreach (var session in Model)
+        {
+            <div class="col mb-4">
+                <div class="card glass-card session-card h-100">
+                    <img class="session-img" src="@session.ImageURL" alt="@session.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">@session.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@session.GetInfo()</h6>
+                        <p class="card-text">@session.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="@Url.Action("Contact", "Home")">Book Now</a>
+                        @if (session.Refund)
+                        {
+                            <span class="refund-badge refundable" title="Refunds can be given if you are unable to make it">Refundable</span>
+                        }
+                        else
+                        {
+                            <span class="refund-badge no-refund" title="No refunds are given if you are unable to make it">Non-refundable</span>
+                        }
                     </div>
                 </div>
-            }
-        </div>
+            </div>
+        }
     </div>
+
+</div>

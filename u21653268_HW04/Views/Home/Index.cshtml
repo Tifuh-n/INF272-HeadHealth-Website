@@ -1,84 +1,74 @@
-﻿@{
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div>
-    <img class="img-fluid" src="~/Images/Banner1.png" height="500"/> 
-</div>
+<div class="page-wrap">
 
-<br/>
+    <img class="hero-banner" src="~/Images/Banner1.png" alt="HeadHealth banner" />
 
-<div >
-    <p class="text-center">
-        <img class="img-fluid" src="~/Images/HeadHealthLogo.png" height="200"/>
-        <h1 class="text-center" style="text-shadow: 2px 2px 5px green;">HeadHealth is all about YOU and YOUR mental health</h1>
-    </p>
-    
-</div>
+    <section class="hero-card text-center">
+        @*<img class="hero-logo" src="~/Images/HeadHealthLogo.png" alt="HeadHealth logo" />*@
+        <h1 class="brand-title">HeadHealth is all about YOU and YOUR mental health</h1>
+    </section>
 
-<br/>
-
-<div class="row">
-    <div class="col-md-4 text-center p-3 container" style="background-color: #C7F9CC;">
-        <h2 class="text-center">What is HeadHealth all about?</h2>
-        
-        <p>
-            HeadHealth is all about supporting and aiding you in your individual mental health journey. Here you can find resources, seek help and contribute to 
-            ensuring good mental health and well-being to all South Africans. 
-        </p>
-        <p>
-            <button type="button" class="btn btn-success rounded-pill">
-                <a class="btn btn-default text-white" href="/Home/About">About us...</a>
-            </button>
-        </p>
-    </div>
-
-    <div class="col-md-4 text-center p-3 container" style="background-color: #B0DAF1;">
-        <h2 class="text-center">Learn about our partner Inala Mental Health Foundation</h2>
-        
-        <p>
-            Inala is a registered non-profit company focusing on mental health and wellbeing. They believe that by shifting the mental state of an individual,
-            they can impact directly on their ability to make positive choices, actions and relationships.
-        </p>
-        <p>
-            <button type="button" class="btn btn-primary rounded-pill">
-                <a class="btn btn-default text-white" href="https://www.inala.org.za/">Learn more...</a>
-            </button>
-        </p>
-    </div>
-    <div class="col-md-4 text-center p-3 container" style="background-color: #C7F9CC;" >
-        <h2 class="text-center">Counselling</h2>
-        
-        <p>Book an affrodable and confidential counselling assessment at any time that suits you best, online or in-person. Our low-cost Counsellors, Psychotherapists and Counselling Psychologists are either in training, working towards qualification or accreditation.</p>
-        <p>
-            <button type="button" class="btn btn-success rounded-pill">
-                <a class="btn btn-default text-white" href="/Home/Counselling">Learn more...</a>
-            </button>
-        </p>
-    </div>
-</div>
-
-<br/>
-
-<div class="container">
-    <h1>For more help</h1>
-    <br/>
-    <img class="img-fluid" src="https://www.naxacon.co.za/images/sadag-logo-1.png"/>
-    <br/>
-    <br/>
-    <div class="row">
-        <div class="col">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Suicide Crisis Helpline:</b> 0800 567 567</li>
-                <li class="list-group-item"><b>Dr Reddy's Mental Health Helpline:</b> 0800 21 22 23</li>
-                <li class="list-group-item"><b>Cipla Mental Health Helpline:</b> 0800 456 789</li>
-            </ul>
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <div class="glass feature-card">
+                <h2>What is HeadHealth all about?</h2>
+                <p>
+                    HeadHealth is all about supporting and aiding you in your individual mental health journey. Here you can find resources, seek help and contribute to
+                    ensuring good mental health and well-being to all South Africans.
+                </p>
+                <a class="btn btn-success" href="@Url.Action("About", "Home")">About us...</a>
+            </div>
         </div>
-        <div class="col">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Dept Development Substance Abuse Helpline:</b> 0800 12 13 14</li>
-                <li class="list-group-item"><b>Adcock Ingram Depression & Anxiety Helpline:</b> 0800 70 80 90</li>
-                <li class="list-group-item"><b>HeadHealth Mental Health Helpline:</b> 0123 456 789</li>
-            </ul>
+
+        <div class="col-md-4 mb-4">
+            <div class="glass feature-card">
+                <h2>Learn about our partner Inala Mental Health Foundation</h2>
+                <p>
+                    Inala is a registered non-profit company focusing on mental health and wellbeing. They believe that by shifting the mental state of an individual,
+                    they can impact directly on their ability to make positive choices, actions and relationships.
+                </p>
+                <a class="btn btn-primary" href="https://www.inala.org.za/" target="_blank" rel="noopener">Learn more...</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="glass feature-card">
+                <h2>Counselling</h2>
+                <p>
+                    Book an affordable and confidential counselling assessment at any time that suits you best, online or in-person. Our low-cost Counsellors, Psychotherapists and Counselling Psychologists are either in training, working towards qualification or accreditation.
+                </p>
+                <a class="btn btn-success" href="@Url.Action("Counselling", "Home")">Learn more...</a>
+            </div>
         </div>
     </div>
+
+    <section class="glass glass-lg helplines">
+        <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+            <h2 class="section-title mb-2">For more help</h2>
+            <div class="logo-tile logo-tile-sm mb-2">
+                <img src="~/Images/Sadag-logo.png" alt="SADAG logo" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush helpline-list">
+                    <li class="list-group-item"><b>Suicide Crisis Helpline:</b> 0800 567 567</li>
+                    <li class="list-group-item"><b>Dr Reddy's Mental Health Helpline:</b> 0800 21 22 23</li>
+                    <li class="list-group-item"><b>Cipla Mental Health Helpline:</b> 0800 456 789</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush helpline-list">
+                    <li class="list-group-item"><b>Dept Development Substance Abuse Helpline:</b> 0800 12 13 14</li>
+                    <li class="list-group-item"><b>Adcock Ingram Depression &amp; Anxiety Helpline:</b> 0800 70 80 90</li>
+                    <li class="list-group-item"><b>HeadHealth Mental Health Helpline:</b> 0123 456 789</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>

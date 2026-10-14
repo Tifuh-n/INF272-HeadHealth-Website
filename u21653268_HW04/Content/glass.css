@@ -1,0 +1,233 @@
+/* ==========================================================================
+   HeadHealth - glass theme (works on top of Bootstrap 4)
+   Everything is scoped to .page-wrap so the layout/navbar are not affected.
+   ========================================================================== */
+
+:root {
+    --hh-ink: #17332b;
+    --hh-muted: #5b7068;
+    --hh-green: #2f9e6b;
+    --hh-green-soft: rgba(199, 249, 204, .55);   /* your original #C7F9CC */
+    --hh-blue-soft: rgba(176, 218, 241, .55);    /* your original #B0DAF1 */
+    --hh-glass: rgba(255, 255, 255, .52);
+    --hh-glass-strong: rgba(255, 255, 255, .72);
+    --hh-border: rgba(255, 255, 255, .75);
+    --hh-shadow: 0 10px 40px rgba(31, 80, 64, .12);
+    --hh-radius: 24px;
+}
+
+/* ---------- Background: soft colour blobs for the glass to blur ---------- */
+html { background: #e6f6ee; }
+
+body {
+    background-color: transparent;
+    color: var(--hh-ink);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    background:
+        radial-gradient(40rem 30rem at 12% 8%,  rgba(120, 225, 170, .55), transparent 60%),
+        radial-gradient(38rem 30rem at 88% 18%, rgba(130, 190, 240, .55), transparent 60%),
+        radial-gradient(40rem 34rem at 70% 95%, rgba(190, 170, 245, .40), transparent 60%),
+        linear-gradient(135deg, #e8f9ee, #dcecf8 60%, #ece6fb);
+}
+
+/* ---------- Page wrapper ---------- */
+.page-wrap { padding-top: 1.5rem; padding-bottom: 3rem; }
+.container .page-wrap { padding-left: 0; padding-right: 0; }   /* avoid double padding if layout already has .container */
+
+/* ---------- Glass panels ---------- */
+.page-wrap .glass,
+.page-wrap .card.glass-card,
+.glass-nav {
+    background: var(--hh-glass);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid var(--hh-border);
+    border-radius: var(--hh-radius);
+    box-shadow: var(--hh-shadow), inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+/* Older browsers without backdrop-filter get a more solid panel */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .page-wrap .glass,
+    .page-wrap .card.glass-card,
+    .glass-nav,
+    .glass-footer { background: var(--hh-glass-strong); }
+}
+
+.page-wrap .glass-lg { padding: 2rem; margin-bottom: 1.5rem; }
+@media (max-width: 575.98px) { .page-wrap .glass-lg { padding: 1.25rem; } }
+
+.page-wrap .tint-green { background: var(--hh-green-soft); }
+.page-wrap .tint-blue  { background: var(--hh-blue-soft); }
+
+/* ---------- Typography ---------- */
+.page-wrap h1, .page-wrap h2, .page-wrap h3, .page-wrap h4, .page-wrap h5 { color: var(--hh-ink); }
+.page-wrap .page-title   { font-weight: 700; margin-bottom: .25rem; }
+.page-wrap .page-sub     { color: var(--hh-muted); margin-bottom: 0; }
+.page-wrap .section-title { font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem; }
+.page-wrap p { line-height: 1.65; }
+.page-wrap a:not(.btn) { color: var(--hh-green); }
+.page-wrap .info-label {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--hh-muted);
+    margin: 1.25rem 0 .25rem;
+}
+.page-wrap .info-label:first-child { margin-top: 0; }
+
+/* ---------- Buttons ---------- */
+.page-wrap .btn {
+    border-radius: 999px;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.page-wrap .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0, 0, 0, .14); }
+
+/* ---------- Home: hero ---------- */
+.page-wrap .hero-banner {
+    display: block;
+    width: 100%;
+/*    max-height: 380px;
+    object-fit: cover;*/
+    border-radius: 28px;
+    box-shadow: var(--hh-shadow);
+}
+.page-wrap .hero-card {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 10px auto 0;       /* overlaps the banner so the glass blurs it */
+}
+@media (max-width: 575.98px) { .page-wrap .hero-card { margin-top: -32px; } }
+.page-wrap .hero-logo   { height: 110px; width: auto; max-width: 100%; margin-bottom: .75rem; }
+.page-wrap .brand-title { font-size: clamp(1.5rem, 3.4vw, 2.25rem); font-weight: 700; margin: 0; }
+
+/* ---------- Home: feature cards ---------- */
+.page-wrap .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 1.75rem 1.5rem;
+    margin-bottom: 0;
+}
+.page-wrap .feature-card h2 { font-size: 1.25rem; font-weight: 700; }
+.page-wrap .feature-card p  { color: var(--hh-muted); flex-grow: 1; }
+
+/* ---------- Helplines ---------- */
+.page-wrap .helpline-list .list-group-item {
+    background: transparent;
+    border-color: rgba(23, 51, 43, .10);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ---------- Images ---------- */
+.page-wrap .about-photo { width: 100%; max-height: 420px; object-fit: cover; border-radius: 20px; }
+.page-wrap .doc-img     { width: 100%; height: auto; border-radius: 16px; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, .08); }
+.page-wrap .logo-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: var(--hh-glass-strong);
+    border-radius: 20px;
+}
+.page-wrap .logo-tile img    { max-width: 100%; max-height: 140px; height: auto; }
+.page-wrap .logo-tile-sm     { padding: .6rem 1rem; }
+.page-wrap .logo-tile-sm img { max-height: 48px; }
+
+/* ---------- Forms ---------- */
+.page-wrap label { font-weight: 600; font-size: .9rem; }
+.page-wrap .form-control {
+    height: auto;
+    padding: .65rem .95rem;
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 14px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .04);
+}
+.page-wrap .form-control:focus {
+    background: #fff;
+    border-color: var(--hh-green);
+    box-shadow: 0 0 0 .2rem rgba(47, 158, 107, .20);
+}
+.page-wrap .alert { border: 0; border-radius: 14px; }
+
+/* ---------- Contact: map ---------- */
+.page-wrap .map-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .10);
+}
+
+/* ---------- Counselling: session cards ---------- */
+.page-wrap .session-card { overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.page-wrap .session-card:hover { transform: translateY(-4px); box-shadow: 0 16px 44px rgba(31, 80, 64, .18); }
+.page-wrap .session-img { width: 100%; height: 210px; object-fit: cover; }
+.page-wrap .session-card .card-body   { padding: 1.25rem 1.4rem; }
+.page-wrap .session-card .card-footer { padding: 1rem 1.4rem; background: transparent; border-top: 1px solid rgba(255, 255, 255, .7); }
+.page-wrap .refund-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: .3rem .8rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: help;
+}
+
+    .page-wrap .refund-badge::before {
+        content: "";
+        flex: none;
+        width: .5rem;
+        height: .5rem;
+        margin-right: .45rem;
+        border-radius: 50%;
+        background: currentColor;
+    }
+
+    .page-wrap .refund-badge.refundable {
+        background: rgba(47, 158, 107, .15);
+        color: #1f7a50;
+    }
+
+    .page-wrap .refund-badge.no-refund {
+        background: rgba(224, 164, 88, .22);
+        color: #96601a;
+    }
+
+/* ---------- Navbar & footer (used by _Layout) ---------- */
+.glass-nav {
+    margin: .75rem;
+    padding: .4rem 1rem;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .75) 20%, rgba(84, 196, 102, .55) 80%);
+}
+.glass-nav .navbar-nav .nav-link {
+    margin: 0 .15rem;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    color: var(--hh-ink);
+    transition: background-color .15s ease;
+}
+.glass-nav .navbar-nav .nav-link:hover  { background: rgba(255, 255, 255, .55); }
+.glass-nav .navbar-nav .nav-link.active { background: rgba(255, 255, 255, .85); color: var(--hh-ink); box-shadow: 0 2px 8px rgba(0, 0, 0, .08); }
+
+.glass-footer {
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}

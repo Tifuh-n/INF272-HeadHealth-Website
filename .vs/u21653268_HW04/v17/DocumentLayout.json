@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\content\\glass.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\content\\glass.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\views\\home\\counselling.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\views\\home\\counselling.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|c:\\users\\tifuh\\onedrive\\documents\\coding\\up_assignments\\hw04\\u21653268_hw04\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C92323B1-1909-4B2B-8182-A62155575799}|u21653268_HW04\\u21653268_HW04.csproj|solutionrelative:u21653268_hw04\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:796548636:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Counselling.cshtml",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Counselling.cshtml",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Views\\Home\\Counselling.cshtml",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Counselling.cshtml",
+              "RelativeToolTip": "u21653268_HW04\\Views\\Home\\Counselling.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T11:27:38.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "glass.css",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Content\\glass.css",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Content\\glass.css",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Content\\glass.css",
+              "RelativeToolTip": "u21653268_HW04\\Content\\glass.css",
+              "ViewState": "AgIAANgAAAAAAAAAAAAmwOgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-14T11:15:00.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "u21653268_HW04\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:54:59.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "u21653268_HW04\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:53:56.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "u21653268_HW04\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T10:53:33.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "u21653268_HW04\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tifuh\\OneDrive\\Documents\\Coding\\UP_Assignments\\hw04\\u21653268_HW04\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "u21653268_HW04\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T08:45:59.293Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

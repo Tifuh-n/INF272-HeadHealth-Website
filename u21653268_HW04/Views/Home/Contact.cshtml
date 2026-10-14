@@ -1,84 +1,97 @@
-﻿@{
+@using System.IO
+@{
     ViewBag.Title = "Contact";
 }
-<div class="container">
-    <h1><b>@ViewBag.Title</b> Us</h1>
-    <h4 class="text-muted">@ViewBag.Message</h4>
-    <br />
-    @{
-        var confirmation = "";
-        if (IsPost)
-        {
-            var name = Request["Name"];
-            var email = Request["Email"];
-            var phoneNum = Request["Cell"];
-            var surname = Request["Surname"];
-            var message = Request["Message"];
 
-            var temp = "Full name: " + name + " " + surname + Environment.NewLine + "Contact Details" + Environment.NewLine + "Email: " + email + Environment.NewLine + "Phone Number: " + phoneNum + Environment.NewLine + "Message: " + message + Environment.NewLine;
-            var file = Server.MapPath("~/App_Data/contacts.txt");
-            File.AppendAllText(file, temp);
-            confirmation = "Sent successfully";
-        }
+@{
+    var confirmation = "";
+    if (IsPost)
+    {
+        var name = Request["Name"];
+        var email = Request["Email"];
+        var phoneNum = Request["Cell"];
+        var surname = Request["Surname"];
+        var message = Request["Message"];
+
+        var temp = "Full name: " + name + " " + surname + Environment.NewLine + "Contact Details" + Environment.NewLine + "Email: " + email + Environment.NewLine + "Phone Number: " + phoneNum + Environment.NewLine + "Message: " + message + Environment.NewLine;
+        var file = Server.MapPath("~/App_Data/contacts.txt");
+        File.AppendAllText(file, temp);
+        confirmation = "Sent successfully";
     }
+}
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h5><u>Operating Hours:</u></h5>
-                <h6 class="text-muted">Monday-Sunday 24hrs</h6>
+<div class="page-wrap">
 
-                <h5><u>Address:</u></h5>
-                <address>
+    <header class="mb-4">
+        <h1 class="page-title"><b>@ViewBag.Title</b> Us</h1>
+        @if (ViewBag.Message != null)
+        {
+            <p class="page-sub">@ViewBag.Message</p>
+        }
+    </header>
+
+    <div class="row">
+
+        <div class="col-lg-5 mb-4">
+            <section class="glass glass-lg h-100 mb-0">
+                <h5 class="info-label">Operating Hours</h5>
+                <p class="mb-0">Monday-Sunday 24hrs</p>
+
+                <h5 class="info-label">Address</h5>
+                <address class="mb-3">
                     18 Venus Lane<br />
-                    Pretoria, South Africa<br />
+                    Pretoria, South Africa
                 </address>
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361.73833879844!2d28.21491137197259!3d-25.75537733169799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561bd17853bd3%3A0xa7083bed5b42c902!2sUniversity%20of%20Pretoria!5e0!3m2!1sen!2sza!4v1660927264462!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <br />
-                <h5><u>Contact Details:</u></h5>
-                <address>
-                    <strong>Email:</strong>   <a href="mailto:HeadHealth@example.com">HeadHealth@example.com</a><br />
-                    <strong>Tel:</strong> +27 82 790 5656<br />
-                </address>
-            </div>
 
-            <div class="col">
-                <h5><u>Contact form:</u></h5>
+                <div class="map-frame embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361.73833879844!2d28.21491137197259!3d-25.75537733169799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561bd17853bd3%3A0xa7083bed5b42c902!2sUniversity%20of%20Pretoria!5e0!3m2!1sen!2sza!4v1660927264462!5m2!1sen!2sza" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h5 class="info-label">Contact Details</h5>
+                <address class="mb-0">
+                    <strong>Email:</strong> <a href="mailto:HeadHealth@example.com">HeadHealth@example.com</a><br />
+                    <strong>Tel:</strong> +27 82 790 5656
+                </address>
+            </section>
+        </div>
+
+        <div class="col-lg-7 mb-4">
+            <section class="glass glass-lg h-100 mb-0">
+                <h2 class="section-title">Send us a message</h2>
+
                 <form method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="name">Name</label>
+                            <label for="Name">Name</label>
                             <input type="text" class="form-control" id="Name" name="name" placeholder="Name">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="surname">Surname</label>
+                            <label for="Surname">Surname</label>
                             <input type="text" class="form-control" id="Surname" name="surname" placeholder="Surname">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="cell">Phone Number</label>
+                        <label for="Cell">Phone Number</label>
                         <input type="text" class="form-control" id="Cell" name="cell" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="Email">Email</label>
                         <input type="email" class="form-control" id="Email" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="Message" name="message" rows="4"></textarea>
+                        <label for="Message">Message</label>
+                        <textarea class="form-control" id="Message" name="message" rows="5" placeholder="How can we help?"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary rounded-pill">SEND</button>
+                    <button type="submit" class="btn btn-primary">SEND</button>
                 </form>
-                <div>
-                    @if (confirmation != "")
-                    {
-                        <p class="text-muted">@confirmation</p>
-                    }
-                </div>
-            </div>
+
+                @if (confirmation != "")
+                {
+                    <div class="alert alert-success mt-3 mb-0" role="alert">@confirmation</div>
+                }
+            </section>
         </div>
 
     </div>
+</div>

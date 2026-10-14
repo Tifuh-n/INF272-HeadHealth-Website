@@ -1,54 +1,54 @@
-﻿<!DOCTYPE html>
+@{
+    var currentAction = (ViewContext.RouteData.Values["action"] as string ?? "").ToLower();
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - HeadHealth</title>
     @Styles.Render("~/Content/css")
+    <link href="~/Content/glass.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" style="background-image: linear-gradient(90deg, rgb(255, 255, 255) 20%, rgb(84, 196, 102) 80%); ">
+    <nav class="navbar navbar-expand-lg navbar-light glass-nav sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="~/Images/HeadHealthLogo.png" height="60" alt="Logo"/>
+                <img src="~/Images/HeadHealthLogo.png" height="60" alt="HeadHealth logo" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Home">Home</a>
+                        <a class="nav-link @(currentAction == "home" ? "active" : "")" href="/Home/Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Index">Index</a>
+                        <a class="nav-link @(currentAction == "index" ? "active" : "")" href="/Home/Index">Index</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/About">About Us</a>
+                        <a class="nav-link @(currentAction == "about" ? "active" : "")" href="/Home/About">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Counselling">Counselling</a>
+                        <a class="nav-link @(currentAction == "counselling" ? "active" : "")" href="/Home/Counselling">Counselling</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Contact">Contact Us</a>
+                        <a class="nav-link @(currentAction == "contact" ? "active" : "")" href="/Home/Contact">Contact Us</a>
                     </li>
-
-
                 </ul>
-            
             </div>
         </div>
     </nav>
 
-   
-    <div class=" body-content">
+    <main class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <footer class="glass-footer">
+            <p class="mb-0">&copy; @DateTime.Now.Year - HeadHealth</p>
         </footer>
-    </div>
+    </main>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
