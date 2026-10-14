@@ -3,11 +3,11 @@
 A multi-page website for **HeadHealth**, a fictional South African mental health and counselling service. Visitors can learn about the organisation and its partner, browse the counselling sessions on offer, find crisis helplines, and send the team a message.
 
 
-**Author:** Tifuh Nche
-**Course:** [COURSE CODE AND NAME]
-**Institution:** [UNIVERSITY NAME]
-**Assignment:** Homework 04 (HW04)
-**Year:** 2022
+- **Author:** Tifuh Nche
+- **Course:** INF 272 - Advanced Programming
+- **Institution:** The University of Pretoria
+- **Assignment:** Homework 04 (HW04)
+- **Year:** 2022
 
 ---
 
